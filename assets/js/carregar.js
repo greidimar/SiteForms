@@ -23,11 +23,12 @@ const content = `<div class="nes-container with-title is-centered">
 <progress class="nes-progress is-sucess" value="10" max="100"> </progress>
 
 <button type="button" class="nes-btn is-primary">-</button>
-<button type="button" class="nes-btn is-error">Apagar</button>
+<button onclick="apagar('${tarefa.id}')" type="button" class="nes-btn is-error">Apagar</button>
 <button type="button" class="nes-btn is-primary">+</button>
 </div>`
 
 const card = document.createElement("div")
+card.id = tarefa.id
 card.innerHTML = content
 
 document.querySelector("#lista-de-tarefas").appendChild(card)
